@@ -1,0 +1,78 @@
+on:
+  workflow_dispatch
+
+jobs:
+  about_issue:
+    name: Create about Issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create About
+        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        with:
+          title: "Create an about file"
+          body: |
+            Add a file `about.md` that has your name and expected graduation in it 
+            follow along to close this issue with  commit. 
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  classmate_issue:
+    name: Create classmate Issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create classmate
+        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        with:
+          title: "Create a Add a classmate"
+          body: |
+            owner:
+            - [ ] give a class mate access to the repo
+            - [ ] assign this issue to them
+
+            classmate:
+            - [ ] add `classmate.md` with your name and expected graduation on  a bracn `classmate`
+            - [ ] open a PR that will close this issue
+            ```
+
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  readme_issue:
+    name: Create readme Issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create readme
+        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        with:
+          title: "Create a README"
+          body: |
+            A README on GitHub, is ideally a markdown file, github will render that nicely
+
+            ### Steps
+            - [ ] Add self as assignee to this issue
+            - [ ] check off another item
+            - [ ] use edit to see how they look in plain text mode, the check this off there
+
+            create the file and close this issue with your commit message
+
+            contents:
+            ```
+            # GitHub Practice
+
+            Name: <your name here>
+            ```
+
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
