@@ -1,3 +1,3 @@
 # GitHub Practice
 
-Name: <Nick Rapoza>
+Name: Nick Rapoza
