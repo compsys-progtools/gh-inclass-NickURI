@@ -1,0 +1,1 @@
+utitly functions that are called by many classes 
