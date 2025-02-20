@@ -1,0 +1,1 @@
+tests for constructors and methods in alternative_classes.py

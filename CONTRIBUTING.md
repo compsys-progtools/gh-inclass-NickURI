@@ -1,0 +1,1 @@
+instructions for how people can contribute to the project
